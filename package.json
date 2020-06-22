@@ -21,7 +21,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "db-migrate": "^0.11.11",
-    "mongoose": "^4.10.8",
+    "mongoose": "^5.7.5",
     "db-migrate-mongodb": "^1.5.0"
   }
 }
