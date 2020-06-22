@@ -25,5 +25,8 @@ module.exports = function(category){
 			result = response.reduce((acc, data) => [...acc, ...data.data.results], result);
 			return result;
 		})
-		.catch(error => defaultLog.errorLog.info('what is the error', error));
+		.catch(
+			//TODO, if fetching data fail, do we want to send a res to client or try couple times more?
+			error => defaultLog.errorLog.info('what is the error', error)
+		);
 };

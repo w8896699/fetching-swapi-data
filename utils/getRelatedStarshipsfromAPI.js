@@ -16,5 +16,6 @@ module.exports =  async function(urls){
 				promises.push(mongoose.Types.ObjectId(item._id));
 			});
 	}
+	//TODO add error handing, like disconnect from db, try to reconnect
 	return (promises);
 };
