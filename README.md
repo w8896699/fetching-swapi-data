@@ -22,7 +22,7 @@ This Application will create a db __SWData__ and two collections: __people__ and
 ### Explaination 
 For this exercise, goal is to write a small application that pulls people and starship data from https://swapi.dev/ and save that into a database with its relations.
 
-I came up with 3 plan:
+I came up with 2 plans:
 
 #### Plan A
 Do not set any endpoint in router, use db-migration to fetch the data and wired up there relation. Benifit for this way is we will have migration record in database and the migration script will only run once against database, so we do not need to check duplication in this case.
