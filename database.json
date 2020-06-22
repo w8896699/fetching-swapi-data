@@ -1,0 +1,9 @@
+{
+    "defaultEnv": "local",
+  
+    "local": {
+      "driver": "mongodb",
+      "database": "SWData",
+      "host": "localhost"
+    }
+  }

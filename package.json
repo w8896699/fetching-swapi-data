@@ -1,0 +1,27 @@
+{
+  "name": "code-challenge-moz",
+  "version": "1.0.0",
+  "description": "Code Challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "Billy Li",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parse": "^0.1.0",
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "winston": "^3.2.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "db-migrate": "^0.11.11",
+    "mongoose": "^4.10.8",
+    "db-migrate-mongodb": "^1.5.0"
+  }
+}
