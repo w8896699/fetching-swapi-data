@@ -76,11 +76,12 @@ router.get('/fetchInfo',async (req, res) =>{
 			newPeople.url = peopleInfo.url;
         
 			//find corresponding star ship for each people
-			var starshipID;
+			var starshipID; //方法1
 			if(peopleInfo.starships.length !== 0){ // an array of urls of starship
-				starshipID = await getStarships(peopleInfo.starships, 'Starship');
-				console.log('hiahiahia',starshipID);
-				newPeople.starships = starshipID;
+				starshipID = await getStarships(peopleInfo.starships, 'Starship'); //come in as whole object
+				
+				newPeople.starships = starshipID.map(starShip => starShip._id); //flatten obj, just need id
+				
 			}else{
 				newPeople.starships = peopleInfo.starships; //is an empty array
 			}
