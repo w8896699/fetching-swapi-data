@@ -48,7 +48,8 @@ router.get('/fetchInfo',async (req, res) =>{
 
 		await StarShip.collection.insert(AllStarshipsData, function (err) {
 			if (err){ 
-				return defaultLog.errorLog.info(err);
+				defaultLog.errorLog.info(err);
+				return err;
 			}
 			defaultLog.accessLog.info('Successful inserted starShip into Collection');
 		});
@@ -77,7 +78,8 @@ router.get('/fetchInfo',async (req, res) =>{
 			//find corresponding star ship for each people
 			var starshipID;
 			if(peopleInfo.starships.length !== 0){ // an array of urls of starship
-				starshipID = await getStarships(peopleInfo.starships);
+				starshipID = await getStarships(peopleInfo.starships, 'Starship');
+				console.log('hiahiahia',starshipID);
 				newPeople.starships = starshipID;
 			}else{
 				newPeople.starships = peopleInfo.starships; //is an empty array
@@ -95,6 +97,13 @@ router.get('/fetchInfo',async (req, res) =>{
 			}
 		});
 
+		// if(peopleInfo.starships.length !== 0){ // an array of urls of starship
+		// 	peopleID = await getStarships(peopleInfo.pilots, 'People');
+		// 	newPeople.starships = peopleID;
+		// }else{
+		// 	newPeople.starships = peopleInfo.starships; //is an empty array
+		// }
+		
 		res.send('Finished fetching process');
 	} catch(e){
 		defaultLog.errorLog.info('Error:', e);
