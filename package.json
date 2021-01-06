@@ -19,7 +19,7 @@
     "winston": "^3.2.1"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "db-migrate": "^0.11.11",
     "mongoose": "^4.10.8",
     "db-migrate-mongodb": "^1.5.0"
